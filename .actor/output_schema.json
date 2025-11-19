@@ -1,0 +1,128 @@
+{
+  "title": "Blog Post Generator Output",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "topic": {
+      "title": "Topic",
+      "type": "string",
+      "description": "The topic of the blog post",
+      "editor": "textfield"
+    },
+    "title": {
+      "title": "Title",
+      "type": "string",
+      "description": "The generated blog post title",
+      "editor": "textfield"
+    },
+    "metaDescription": {
+      "title": "Meta Description",
+      "type": "string",
+      "description": "SEO meta description for the blog post",
+      "editor": "textarea"
+    },
+    "content": {
+      "title": "Content",
+      "type": "string",
+      "description": "The full HTML content of the blog post",
+      "editor": "textarea"
+    },
+    "keywords": {
+      "title": "Keywords",
+      "type": "array",
+      "description": "SEO keywords included in the post",
+      "editor": "json",
+      "items": {
+        "type": "string"
+      }
+    },
+    "readingTime": {
+      "title": "Reading Time",
+      "type": "integer",
+      "description": "Estimated reading time in minutes",
+      "editor": "number"
+    },
+    "wordCount": {
+      "title": "Word Count",
+      "type": "integer",
+      "description": "Total word count of the blog post",
+      "editor": "number"
+    },
+    "imageSuggestions": {
+      "title": "Image Suggestions",
+      "type": "array",
+      "description": "Suggested images for the blog post",
+      "editor": "json",
+      "items": {
+        "type": "string"
+      }
+    },
+    "tone": {
+      "title": "Tone",
+      "type": "string",
+      "description": "The tone used in the blog post",
+      "editor": "select",
+      "enum": ["professional", "casual", "technical", "friendly", "authoritative"]
+    },
+    "model": {
+      "title": "AI Model",
+      "type": "string",
+      "description": "The AI model used for generation",
+      "editor": "textfield"
+    },
+    "usage": {
+      "title": "Token Usage",
+      "type": "object",
+      "description": "API token usage statistics",
+      "editor": "json",
+      "properties": {
+        "prompt_tokens": {
+          "type": "integer"
+        },
+        "completion_tokens": {
+          "type": "integer"
+        },
+        "total_tokens": {
+          "type": "integer"
+        }
+      }
+    },
+    "cost": {
+      "title": "API Cost",
+      "type": "number",
+      "description": "Total API cost in USD",
+      "editor": "number"
+    },
+    "chargePrice": {
+      "title": "Charge Price",
+      "type": "number",
+      "description": "Price charged to user in USD",
+      "editor": "number"
+    },
+    "profit": {
+      "title": "Profit",
+      "type": "number",
+      "description": "Profit from this generation in USD",
+      "editor": "number"
+    },
+    "profitMargin": {
+      "title": "Profit Margin",
+      "type": "number",
+      "description": "Profit margin percentage",
+      "editor": "number"
+    },
+    "duration": {
+      "title": "Duration",
+      "type": "number",
+      "description": "Generation duration in seconds",
+      "editor": "number"
+    },
+    "generatedAt": {
+      "title": "Generated At",
+      "type": "string",
+      "description": "ISO timestamp of when this was generated",
+      "editor": "textfield",
+      "format": "date-time"
+    }
+  }
+}
