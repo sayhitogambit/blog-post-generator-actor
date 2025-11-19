@@ -1,0 +1,30 @@
+# macOS
+.DS_Store
+
+# IDE
+.idea
+.vscode
+.zed
+
+# Node.js
+node_modules
+npm-debug.log*
+*.log
+
+# Environment variables
+.env
+.env.local
+
+# Apify storage
+apify_storage
+crawlee_storage
+storage/*
+
+# Keep INPUT.json for testing
+!storage/key_value_stores
+!storage/key_value_stores/default
+!storage/key_value_stores/default/INPUT.json
+
+# Build output
+dist
+build

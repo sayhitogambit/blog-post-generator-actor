@@ -1,0 +1,29 @@
+{
+  "name": "blog-post-generator",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "AI-powered blog post generator using OpenRouter API",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "node src/main.js",
+    "test": "echo \"No tests specified\" && exit 0"
+  },
+  "author": "Apify",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "apify": "^3.4.2",
+    "axios": "^1.6.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "keywords": [
+    "apify",
+    "actor",
+    "openrouter",
+    "ai",
+    "blog",
+    "content-generation",
+    "seo"
+  ]
+}

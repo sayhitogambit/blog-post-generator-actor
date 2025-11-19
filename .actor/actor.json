@@ -1,0 +1,63 @@
+{
+  "actorSpecification": 1,
+  "name": "blog-post-generator",
+  "title": "AI Blog Post Generator - OpenRouter",
+  "description": "Generate SEO-optimized blog posts using OpenRouter AI models (GPT-5.1, Claude 4.5). Create high-quality, engaging content with customizable tone, length, and keywords. Perfect for content marketing, SEO agencies, and automated blog creation.",
+  "version": "1.0.0",
+  "meta": {
+    "templateId": "openrouter-blog-generator"
+  },
+  "storages": {
+    "dataset": {
+      "actorSpecification": 1,
+      "title": "Blog Posts Dataset",
+      "views": {
+        "overview": {
+          "title": "Overview",
+          "transformation": {
+            "fields": [
+              "title",
+              "metaDescription",
+              "wordCount",
+              "readingTime",
+              "keywords",
+              "cost"
+            ]
+          },
+          "display": {
+            "component": "table",
+            "properties": {
+              "title": {
+                "label": "Blog Title",
+                "format": "text"
+              },
+              "metaDescription": {
+                "label": "Meta Description",
+                "format": "text"
+              },
+              "wordCount": {
+                "label": "Word Count",
+                "format": "number"
+              },
+              "readingTime": {
+                "label": "Reading Time (min)",
+                "format": "number"
+              },
+              "keywords": {
+                "label": "Keywords",
+                "format": "array"
+              },
+              "cost": {
+                "label": "API Cost ($)",
+                "format": "number"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "dockerfile": "./Dockerfile",
+  "input": "./.actor/input_schema.json",
+  "readme": "./README.md"
+}

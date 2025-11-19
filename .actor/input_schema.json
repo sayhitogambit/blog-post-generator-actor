@@ -1,0 +1,74 @@
+{
+  "title": "Blog Post Generator Input",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "topic": {
+      "title": "Blog Topic",
+      "type": "string",
+      "description": "The main topic or subject for the blog post",
+      "editor": "textfield",
+      "example": "The Future of AI in Content Marketing",
+      "minLength": 3
+    },
+    "keywords": {
+      "title": "Target Keywords (SEO)",
+      "type": "array",
+      "description": "SEO keywords to naturally incorporate into the article",
+      "editor": "stringList",
+      "default": [],
+      "example": ["AI content", "marketing automation", "content strategy"]
+    },
+    "tone": {
+      "title": "Writing Tone",
+      "type": "string",
+      "description": "The tone and style of writing",
+      "enum": ["professional", "casual", "technical", "friendly", "authoritative"],
+      "default": "professional"
+    },
+    "length": {
+      "title": "Target Word Count",
+      "type": "integer",
+      "description": "Approximate number of words for the blog post",
+      "minimum": 100,
+      "maximum": 5000,
+      "default": 1000
+    },
+    "includeImageSuggestions": {
+      "title": "Include Image Suggestions",
+      "type": "boolean",
+      "description": "Generate suggestions for images to accompany the post",
+      "default": true
+    },
+    "seoOptimized": {
+      "title": "SEO Optimized",
+      "type": "boolean",
+      "description": "Optimize the content for search engines",
+      "default": true
+    },
+    "model": {
+      "title": "AI Model",
+      "type": "string",
+      "description": "Which OpenRouter model to use",
+      "enum": [
+        "openai/gpt-4o",
+        "anthropic/claude-3.5-sonnet",
+        "google/gemini-2.0-flash-exp:free"
+      ],
+      "default": "openai/gpt-4o",
+      "enumTitles": [
+        "GPT-4o (Best Quality)",
+        "Claude 3.5 Sonnet (Balanced)",
+        "Gemini 2.0 Flash (Free/Fast)"
+      ]
+    },
+    "openrouterApiKey": {
+      "title": "OpenRouter API Key",
+      "type": "string",
+      "description": "Your OpenRouter API key (get it from https://openrouter.ai/keys)",
+      "editor": "textfield",
+      "isSecret": true
+    }
+  },
+  "required": ["topic", "openrouterApiKey"]
+}
