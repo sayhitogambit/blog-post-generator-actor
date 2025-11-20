@@ -23,6 +23,7 @@
       "title": "Writing Tone",
       "type": "string",
       "description": "The tone and style of writing",
+      "editor": "select",
       "enum": ["professional", "casual", "technical", "friendly", "authoritative"],
       "default": "professional"
     },
@@ -30,6 +31,7 @@
       "title": "Target Word Count",
       "type": "integer",
       "description": "Approximate number of words for the blog post",
+      "editor": "number",
       "minimum": 100,
       "maximum": 5000,
       "default": 1000
@@ -38,18 +40,21 @@
       "title": "Include Image Suggestions",
       "type": "boolean",
       "description": "Generate suggestions for images to accompany the post",
+      "editor": "checkbox",
       "default": true
     },
     "seoOptimized": {
       "title": "SEO Optimized",
       "type": "boolean",
       "description": "Optimize the content for search engines",
+      "editor": "checkbox",
       "default": true
     },
     "model": {
       "title": "AI Model",
       "type": "string",
       "description": "Which OpenRouter model to use",
+      "editor": "select",
       "enum": [
         "openai/gpt-4o",
         "anthropic/claude-3.5-sonnet",
