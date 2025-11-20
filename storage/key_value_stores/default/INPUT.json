@@ -2,9 +2,9 @@
   "topic": "The Future of AI in Content Marketing",
   "keywords": ["AI content", "content marketing", "automation", "SEO optimization"],
   "tone": "professional",
-  "length": 1000,
+  "length": 500,
   "includeImageSuggestions": true,
   "seoOptimized": true,
-  "model": "google/gemini-2.0-flash-exp:free",
+  "model": "anthropic/claude-3.5-sonnet",
   "openrouterApiKey": "YOUR_OPENROUTER_API_KEY_HERE"
 }
